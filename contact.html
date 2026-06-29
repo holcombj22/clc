@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us - Circleville Lawn Care</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo-section">
+            <div class="logo-placeholder">🌿</div>
+            <a href="index.html" class="logo-text">Circleville Lawn Care</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="register.html" class="nav-button">Register</a>
+        </nav>
+    </div>
+</header>
+
+<section class="page-content">
+
+<div class="page-header">
+<h1>Get In Touch</h1>
+<p>Have questions? We'd love to hear from you. Contact us today!</p>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 60px;">
+
+<div>
+<h2 style="color: #CC3433; margin-bottom: 30px; font-size: 1.8rem;">Contact Information</h2>
+
+<div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 20px;">
+<div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+<i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: #CC3433; margin-top: 3px;"></i>
+<div>
+<h3 style="color: #1F2937; margin-bottom: 5px;">Address</h3>
+<p style="color: #666;">123 Main Street<br>Circleville, OH 43113</p>
+</div>
+</div>
+</div>
+
+<div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 20px;">
+<div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+<i class="fas fa-phone" style="font-size: 1.5rem; color: #CC3433; margin-top: 3px;"></i>
+<div>
+<h3 style="color: #1F2937; margin-bottom: 5px;">Phone</h3>
+<p style="color: #666;"><a href="tel:(740) 123-4567" style="color: #CC3433; text-decoration: none;">(740) 123-4567</a></p>
+</div>
+</div>
+</div>
+
+<div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+<div style="display: flex; align-items: flex-start; gap: 15px;">
+<i class="fas fa-envelope" style="font-size: 1.5rem; color: #CC3433; margin-top: 3px;"></i>
+<div>
+<h3 style="color: #1F2937; margin-bottom: 5px;">Email</h3>
+<p style="color: #666;"><a href="mailto:info@circlevillelandcare.com" style="color: #CC3433; text-decoration: none;">info@circlevillelandcare.com</a></p>
+</div>
+</div>
+</div>
+
+<h3 style="color: #1F2937; margin-top: 30px; margin-bottom: 15px;">Business Hours</h3>
+<p style="color: #666; line-height: 2;">
+Monday - Friday: 8:00 AM - 6:00 PM<br>
+Saturday: 9:00 AM - 4:00 PM<br>
+Sunday: Closed
+</p>
+</div>
+
+<div>
+<h2 style="color: #CC3433; margin-bottom: 30px; font-size: 1.8rem;">Send us a Message</h2>
+
+<form id="contactForm" class="registration-form">
+
+<div class="form-group">
+<label for="name">Full Name *</label>
+<input id="name" required placeholder="Your name">
+</div>
+
+<div class="form-group">
+<label for="contactEmail">Email Address *</label>
+<input id="contactEmail" type="email" required placeholder="your@email.com">
+</div>
+
+<div class="form-group">
+<label for="subject">Subject *</label>
+<input id="subject" required placeholder="What is this about?">
+</div>
+
+<div class="form-group">
+<label for="message">Message *</label>
+<textarea id="message" required placeholder="Tell us your message..." style="min-height: 150px;"></textarea>
+</div>
+
+<button type="submit">
+<i class="fas fa-paper-plane"></i> Send Message
+</button>
+
+</form>
+
+<p style="font-size: 0.9rem; color: #999; margin-top: 15px;">We typically respond within 24 hours.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>&copy; 2026 Circleville Lawn Care. All rights reserved.</p>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/validation.js"></script>
+
+</body>
+</html>

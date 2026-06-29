@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register - Circleville Lawn Care</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo-section">
+            <div class="logo-placeholder">🌿</div>
+            <a href="index.html" class="logo-text">Circleville Lawn Care</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="register.html" class="nav-button">Register</a>
+        </nav>
+    </div>
+</header>
+
+<section class="page-content">
+
+<div class="page-header">
+<h1>New Customer Registration</h1>
+<p>Join our family of satisfied customers. Fill out the form below to get started.</p>
+</div>
+
+<form id="registration" class="registration-form">
+
+<div class="form-row">
+<div class="form-group">
+<label for="firstName">First Name *</label>
+<input id="firstName" required placeholder="Enter your first name">
+</div>
+<div class="form-group">
+<label for="lastName">Last Name *</label>
+<input id="lastName" required placeholder="Enter your last name">
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label for="email">Email Address *</label>
+<input id="email" type="email" required placeholder="your@email.com">
+</div>
+<div class="form-group">
+<label for="phone">Phone Number *</label>
+<input id="phone" required placeholder="(123) 456-7890">
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label for="address">Street Address</label>
+<input id="address" placeholder="123 Main Street">
+</div>
+<div class="form-group">
+<label for="city">City</label>
+<input id="city" placeholder="Circleville">
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label for="zip">ZIP Code</label>
+<input id="zip" placeholder="43113">
+</div>
+<div class="form-group">
+<label for="service">Service Type *</label>
+<select id="service" required>
+<option value="">-- Select a service --</option>
+<option>Weekly Mowing</option>
+<option>Landscaping</option>
+<option>Mulching</option>
+<option>Leaf Removal</option>
+<option>Multiple Services</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label for="requests">Special Requests</label>
+<textarea id="requests" placeholder="Tell us about any special requests or preferences..."></textarea>
+</div>
+
+<button type="submit">
+<i class="fas fa-check"></i> Register
+</button>
+
+</form>
+
+</section>
+
+<footer>
+<p>&copy; 2026 Circleville Lawn Care. All rights reserved.</p>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/validation.js"></script>
+
+</body>
+</html>
