@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Register - Circleville Lawn Care</title>
+<link rel="icon" type="image/png" href="images/CirclevilleLawn-Outline.png">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -12,8 +13,9 @@
 <header class="header">
     <div class="container">
         <div class="logo-section">
-            <div class="logo-placeholder">🌿</div>
-            <a href="index.html" class="logo-text">Circleville Lawn Care</a>
+            <a href="index.html" class="logo-link" aria-label="Circleville Lawn Care Home">
+                <img src="images/CirclevilleLawn-Outline.png" alt="Circleville Lawn Care logo" class="logo-image">
+            </a>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
             <span></span>
@@ -81,11 +83,12 @@
 <label for="service">Service Type *</label>
 <select id="service" required>
 <option value="">-- Select a service --</option>
-<option>Weekly Mowing</option>
-<option>Landscaping</option>
-<option>Mulching</option>
-<option>Leaf Removal</option>
-<option>Multiple Services</option>
+<option>Lawn Fertilization</option>
+<option>Weed Control</option>
+<option>Aeration</option>
+<option>Seeding</option>
+<option>Insect Control</option>
+<option>Winterization</option>
 </select>
 </div>
 </div>
@@ -109,6 +112,46 @@
 
 <script src="js/app.js"></script>
 <script src="js/validation.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('registration');
+    if (!form) return;
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const payload = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        address: document.getElementById('address').value,
+        city: document.getElementById('city').value,
+        zip: document.getElementById('zip').value,
+        service: document.getElementById('service').value,
+        requests: document.getElementById('requests').value,
+      };
+
+      try {
+        const response = await fetch('/api/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+        if (!response.ok) {
+          throw new Error(result.errors?.[0]?.msg || 'Registration failed.');
+        }
+
+        alert('Thank you for registering. Your information has been saved securely.');
+        form.reset();
+      } catch (error) {
+        alert(error.message || 'Registration failed. Please try again.');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
